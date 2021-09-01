@@ -1,0 +1,21 @@
+user:
+  age: 26
+  sex: 1
+  hobbies: [篮球,跑步,听音乐]
+  emailList:
+    - {band: qq, address: 1243@qq.com}
+    - {band: 163, address: 1234@163.com}
+  score: {math: 120, yuwen: 130}
+  user-name: test
+  password: 123456
+
+spring:
+#  mvc:
+#    static-path-pattern: "/res/**"  #url定义访问路径
+  web:
+    resources:
+      static-locations: classpath:/assets/ #定义静态资源可访问位置
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+<h1>Hello, My dear friend!</h1>
+
+<form action="/user" method="get">
+
+  <input type="submit" value="GET">
+</form>
+<form action="/user" method="post">
+  <input type="submit" value="POST">
+</form>
+<form action="/user" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="PUT">
+</form>
+<form action="/user" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="DELETE">
+</form>
+</body>
+</html>
