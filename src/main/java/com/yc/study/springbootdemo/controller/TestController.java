@@ -2,12 +2,11 @@ package com.yc.study.springbootdemo.controller;
 
 import com.yc.study.springbootdemo.bean.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class TestController {
@@ -38,5 +37,17 @@ public class TestController {
     @RequestMapping(value = "/user", method = RequestMethod.PUT)
     public String putUser() {
         return "PUT_USER";
+    }
+
+
+    @GetMapping("/boss/{id}")
+    public Map pathMap(@MatrixVariable("name") String name,
+                       @MatrixVariable("age") Integer age,
+                       @PathVariable("id") String id) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", name);
+        map.put("age", age);
+        map.put("id", id);
+        return map;
     }
 }
